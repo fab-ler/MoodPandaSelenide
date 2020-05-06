@@ -16,6 +16,8 @@ public class MoodModal {
 
     public MoodModal updateDetails(int moodRating, String description, String date) {
         //TODO set mood rating
+        // посчитать разницу между мудрейтинг может быть от 0 до 30 и текущим значением на слайдере (обычно 5)
+        //передвинуться вправо в зависимости от этой разницы
         $("#TextBoxUpdateMoodTag").sendKeys(description);
         //TODO click to appropriate Date
         return this;
