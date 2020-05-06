@@ -22,7 +22,7 @@ public class BaseTest {
 
     @BeforeMethod
     public void openBrowser() {
-        steps = new MoodSteps;
+        steps = new MoodSteps();
     }
 
     @AfterMethod

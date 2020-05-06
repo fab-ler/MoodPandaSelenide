@@ -12,7 +12,7 @@ public class MoodTest extends BaseTest {
         // fill in mood form
         // save - done
         steps
-                .login("miname@mailinator.com", "qazWSX123")
+                .login("miname@mailinator.com", "qaz123")
                 .updateMood(4, "", "");
     }
 }

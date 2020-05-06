@@ -2,20 +2,32 @@ package steps;
 
 import pages.FeedPage;
 import pages.LoginPage;
+import pages.MoodModal;
 
 public class MoodSteps {
     LoginPage loginPage;
     FeedPage feedPage;
+    MoodModal moodModal;
+
+    public MoodSteps() {
+        loginPage = new LoginPage();
+        feedPage = new FeedPage();
+    }
 
     public MoodSteps login(String user, String password) {
-        loginPage.open("https://moodpanda.com/Login/");
+        loginPage.openPage();
         loginPage.login(user, password);
-        feedPage.isPageopened();
+        feedPage.isPageOpened();
         return this;
     }
 
     public MoodSteps updateMood(int moodRating, String description, String date) {
-
+//        feedPage.clickUpdate();
+//        moodModal.isPageOpened();
+//        moodModal.updateDetails(moodRating, description, date);
+//        moodModal.clickUpdateMood();
+//        moodModal.toDiary();
+        //TODO проверить что Diary страница открылась
         return this;
     }
 }
