@@ -1,0 +1,27 @@
+import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Configuration;
+import org.openqa.selenium.By;
+import org.testng.annotations.Test;
+
+import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
+
+public class GoogleTest {
+    @Test
+    public void searchInGoogle () {
+        Configuration.browser = "chrome";
+        //implicit wait
+        Configuration.timeout = 10000;
+        //JS click если оди элемент перекрывает другой
+        //Configuration.clickViaJs = ""
+        //Configuration.headless = true;
+
+        open("https://google.com");
+        $(By.name("q")).sendKeys("TeachMeSkills");
+        $(By.name("btnK")).click();
+        $(By.name("q")).waitUntil(Condition.visible,30000);
+        screenshot();
+        getWebDriver().close();
+    }
+
+}
