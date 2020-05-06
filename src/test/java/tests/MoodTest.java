@@ -13,6 +13,6 @@ public class MoodTest extends BaseTest {
         // save - done
         steps
                 .login("miname@mailinator.com", "qaz123")
-                .updateMood(4, "", "");
+                .updateMood(5, "I feel like dancing :)", "");
     }
 }

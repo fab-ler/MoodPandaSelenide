@@ -12,6 +12,7 @@ public class MoodSteps {
     public MoodSteps() {
         loginPage = new LoginPage();
         feedPage = new FeedPage();
+        moodModal = new MoodModal();
     }
 
     public MoodSteps login(String user, String password) {
@@ -22,11 +23,11 @@ public class MoodSteps {
     }
 
     public MoodSteps updateMood(int moodRating, String description, String date) {
-//        feedPage.clickUpdate();
-//        moodModal.isPageOpened();
-//        moodModal.updateDetails(moodRating, description, date);
-//        moodModal.clickUpdateMood();
-//        moodModal.toDiary();
+        feedPage.clickUpdate();
+        moodModal.isPageOpened();
+        moodModal.updateDetails(moodRating, description, date);
+        moodModal.clickUpdateMood();
+        moodModal.toDiary();
         //TODO проверить что Diary страница открылась
         return this;
     }
